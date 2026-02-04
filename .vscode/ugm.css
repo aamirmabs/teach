@@ -1,0 +1,993 @@
+/* @theme ugm */
+
+@import "default";
+
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Lexend+Deca:wght@500&display=swap");
+
+/* UGM Brand Color Palette */
+:root {
+  --ox-blue: #1d263b;
+  --electric-blue: #00dcf9;
+  --azul: #106fbd;
+  --cambridge: #82ac9f;
+  --naples: #fecb68;
+  --black: #000000;
+  --white: #ffffff;
+  --grey-light: #f5f5f5;
+  --grey-medium: #cccccc;
+  --grey-dark: #666666;
+}
+
+/* Base Slide Styling */
+section {
+  background-color: var(--white);
+  color: var(--ox-blue);
+  /* Body copy: Lexend Deca regular, fallback Arial */
+  font-family: "Lexend Deca", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1.2; /* 120% */
+  padding: 40px 60px;
+}
+
+/* Title Slide */
+section[data-class="title"] {
+  background-color: var(--ox-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 40px 60px;
+}
+
+section[data-class="title"] h1 {
+  color: var(--white);
+  font-size: 2.8em;
+  border-bottom: 3px solid var(--electric-blue);
+  padding-bottom: 0.25em;
+  margin-bottom: 0.3em;
+}
+
+section[data-class="title"] h2 {
+  color: var(--electric-blue);
+  border-left: none;
+  font-size: 1.8em;
+  font-weight: 400;
+  margin-bottom: 0.4em;
+}
+
+section[data-class="title"] p {
+  font-family: "Lexend Deca", Arial, sans-serif;
+  color: var(--white);
+  font-size: 1em;
+}
+
+/* Headings – Fraunces 600, fallback Georgia */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  color: var(--ox-blue);
+  margin-bottom: 0.35em;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.7em;
+  border-bottom: 3px solid var(--electric-blue);
+  padding-bottom: 0.25em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2.3em;
+  border-left: 4px solid var(--electric-blue);
+  padding-left: 0.25em;
+  margin-bottom: 0.45em;
+}
+
+h3 {
+  font-size: 1.9em;
+  color: var(--azul);
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1.6em;
+  color: var(--grey-dark);
+}
+
+/* Paragraphs and Text */
+p {
+  margin-bottom: 0.6em;
+  color: var(--ox-blue);
+  font-family: "Lexend Deca", Arial, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.2;
+}
+
+em {
+  color: var(--electric-blue);
+  font-style: italic;
+}
+
+strong {
+  color: var(--ox-blue);
+  font-weight: 700;
+}
+
+/* Lists */
+ul,
+ol {
+  margin-left: 1.2em;
+  margin-bottom: 0.7em;
+}
+
+li {
+  margin-bottom: 0.3em;
+  color: var(--ox-blue);
+  font-family: "Lexend Deca", Arial, sans-serif;
+  font-size: 0.95em;
+}
+
+ul li::marker {
+  color: var(--azul);
+  font-weight: 700;
+}
+
+ol li::marker {
+  color: var(--azul);
+  font-weight: 700;
+}
+
+/* Links */
+a {
+  color: var(--azul);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid var(--azul);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  background-color: var(--azul);
+  color: var(--white);
+  border-bottom: 1px solid transparent;
+}
+
+/* Code Blocks */
+code {
+  background-color: var(--grey-light);
+  color: #222222;
+  padding: 0.15em 0.3em;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+pre {
+  background-color: var(--white);
+  color: #e8f8ff;
+  padding: 0.8em 1em;
+  border-radius: 6px;
+  box-shadow: 2px;
+  overflow-x: auto;
+  margin: 0.8em 0;
+  border-left: 3px solid;
+  border-left-color: #00b4d6;
+  font-size: 0.85em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition-duration: 0.25s;
+}
+
+pre:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+pre code {
+  background-color: transparent;
+  color: var(--grey-dark);
+  padding: 0;
+  font-weight: 900;
+}
+
+pre code::selection {
+  color: rgb(38, 38, 38);
+  background: yellow;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--cambridge);
+  padding-left: 1em;
+  margin: 0.8em 0;
+  color: var(--grey-dark);
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* Accent Highlights */
+.highlight-cambridge {
+  color: var(--cambridge);
+  font-weight: 600;
+}
+
+.highlight-naples {
+  color: var(--naples);
+  font-weight: 600;
+}
+
+.highlight-azul {
+  color: var(--azul);
+  font-weight: 600;
+}
+
+/* Card/Box Styling */
+.card {
+  background-color: var(--grey-light);
+  border-left: 4px solid var(--electric-blue);
+  padding: 1em;
+  margin: 0.8em 0;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-family: "Lexend Deca", Arial, sans-serif;
+}
+
+.card.accent-cambridge {
+  border-left-color: var(--cambridge);
+  background-color: rgba(130, 172, 159, 0.25);
+}
+
+.card.accent-naples {
+  border-left-color: var(--naples);
+  background-color: rgba(254, 203, 104, 0.25);
+}
+
+.card.accent-azul {
+  border-left-color: var(--azul);
+  background-color: rgba(16, 111, 189, 0.25);
+}
+
+/* Two-Column Layout */
+.columns {
+  display: flex;
+  gap: 1.2em;
+  margin: 1em 0;
+}
+
+.columns > div {
+  flex: 1;
+}
+
+/* Pagination Styling */
+section::after {
+  font-size: 0.7em;
+  color: var(--grey-dark);
+}
+
+/* Header and Footer */
+header,
+footer {
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  height: 24px;
+  font-size: 0.8em;
+  color: var(--grey-dark);
+  padding: 0.3rem;
+  background-color: #0000000d;
+}
+
+header {
+  top: 24px;
+}
+
+footer {
+  bottom: 24px;
+  border-top: 1px solid var(--electric-blue);
+  padding-top: 0.4em;
+}
+
+/* Split Background Support */
+section.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+section.split > * {
+  padding: 32px 28px;
+  font-size: 0.95em;
+  font-family: "Lexend Deca", Arial, sans-serif;
+}
+
+section.split > :nth-child(1) {
+  background-color: var(--ox-blue);
+  color: var(--white);
+}
+
+section.split > :nth-child(2) {
+  background-color: var(--white);
+  color: var(--ox-blue);
+}
+
+/* Image Sizing */
+img {
+  max-width: 100%;
+  max-height: 70%;
+}
+
+/* Invert Class for Dark Backgrounds */
+section.invert {
+  background-color: var(--ox-blue);
+  color: var(--white);
+}
+
+/* Pagination Styling */
+section.invert::after {
+  font-size: 0.7em;
+  color: red;
+}
+
+section.invert h1,
+section.invert h2,
+section.invert h3 {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  color: var(--electric-blue);
+}
+
+section.invert a {
+  color: var(--naples);
+  border-bottom-color: var(--naples);
+}
+
+/* Table Styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 0.9em;
+  font-family: "Lexend Deca", Arial, sans-serif;
+}
+
+table thead {
+  background-color: var(--ox-blue);
+  color: var(--white);
+}
+
+table th {
+  color: var(--azul);
+  padding: 0.7em;
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 2px solid var(--electric-blue);
+}
+
+table td {
+  padding: 0.6em;
+  border-bottom: 1px solid var(--grey-medium);
+  color: var(--ox-blue);
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: var(--grey-light);
+}
+
+table tbody tr:hover {
+  background-color: rgba(0, 220, 249, 0.08);
+}
+
+/* Footer/Paginator (content area) */
+footer {
+  color: var(--grey-dark);
+  font-size: 0.8em;
+  border-top: 1px solid var(--electric-blue);
+  padding-top: 0.6em;
+  margin-top: 1.2em;
+}
+
+/* Utility Classes for Accent Colors */
+.text-ox-blue {
+  color: var(--ox-blue);
+}
+.text-electric-blue {
+  color: var(--electric-blue);
+}
+.text-azul {
+  color: var(--azul);
+}
+.text-cambridge {
+  color: var(--cambridge);
+}
+.text-naples {
+  color: var(--naples);
+}
+
+.bg-ox-blue {
+  background-color: var(--ox-blue);
+  color: var(--white);
+}
+.bg-electric-blue {
+  background-color: var(--electric-blue);
+  color: var(--ox-blue);
+}
+.bg-azul {
+  background-color: var(--azul);
+  color: var(--white);
+}
+.bg-cambridge {
+  background-color: var(--cambridge);
+  color: var(--white);
+}
+bg-naples {
+  background-color: var(--naples);
+  color: var(--ox-blue);
+}
+
+/* Legacy title helpers (if used) */
+section.title header,
+section.title footer {
+  background-color: #106fbd1b;
+  color: var(--grey-medium);
+}
+
+section.title header strong {
+  color: var(--grey-light);
+}
+
+section.title h1 {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  color: var(--white);
+  font-size: 3em;
+  border-bottom: none;
+}
+
+section.title h2 {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  color: var(--electric-blue);
+  border-left: none;
+  font-size: 1.6em;
+  font-weight: 400;
+}
+
+/* Custom Theme Layouts */
+
+/* Heading Page Layouts */
+
+/* 1. Minimal Layout */
+section.heading-minimal {
+  background-color: var(--white);
+  color: var(--ox-blue);
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.heading-minimal h1 {
+  font-size: 3.2em;
+  color: var(--ox-blue);
+  border-bottom: 2px solid var(--electric-blue);
+  padding-bottom: 0.4em;
+  margin-bottom: 0.8em;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+}
+
+section.heading-minimal h2 {
+  font-size: 1.4em;
+  color: var(--grey-dark);
+  border-left: none;
+  font-weight: 400;
+  margin-bottom: 0;
+  font-family: "Lexend Deca", Arial, sans-serif;
+}
+
+/* 2. Funky Layout */
+section.heading-funky {
+  background: var(--naples);
+  color: var(--white);
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+section.heading-funky::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+section.heading-funky h1 {
+  font-size: 3.5em;
+  color: var(--white);
+  border-bottom: 4px solid var(--ox-blue);
+  padding-bottom: 0.3em;
+  margin-bottom: 0.4em;
+  position: relative;
+  z-index: 1;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+}
+
+section.heading-funky h2 {
+  font-size: 1.6em;
+  color: var(--ox-blue);
+  border-left: none;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  font-family: "Lexend Deca", Arial, sans-serif;
+}
+
+/* 3. Formal Layout */
+section.heading-formal {
+  background-color: var(--ox-blue);
+  color: var(--white);
+  padding: 80px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 12px solid var(--electric-blue);
+  position: relative;
+}
+
+section.heading-formal::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--electric-blue);
+}
+
+section.heading-formal h1 {
+  font-size: 3em;
+  color: var(--white);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0.6em;
+  letter-spacing: 0.05em;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+}
+
+section.heading-formal h2 {
+  font-size: 1.3em;
+  color: var(--electric-blue);
+  border-left: none;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-family: "Lexend Deca", Arial, sans-serif;
+}
+
+/* 4. Modern Layout */
+section.heading-modern {
+  background-color: var(--white);
+  color: var(--ox-blue);
+  padding: 40px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+section.heading-modern::before {
+  content: "";
+  grid-column: 2;
+  background: linear-gradient(45deg, var(--electric-blue), var(--azul));
+  border-radius: 8px;
+  height: 100%;
+  min-height: 300px;
+}
+
+section.heading-modern h1 {
+  font-size: 2.8em;
+  color: var(--ox-blue);
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0.4em;
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+}
+
+section.heading-modern h2 {
+  font-size: 1.2em;
+  color: var(--cambridge);
+  border-left: 4px solid var(--cambridge);
+  padding-left: 0.8em;
+  font-weight: 400;
+  margin-bottom: 0;
+  font-family: "Lexend Deca", Arial, sans-serif;
+}
+
+/* =========================================
+   Variant 1: Default (base theme)
+   ========================================= */
+/* Marker class – no extra rules needed, uses all your existing defaults */
+section.ugm-default {
+  /* Intentionally empty: falls back to all base styles above */
+  color: inherit;
+}
+
+/* =========================================
+   Variant 2: Inverted Style Layout
+   ========================================= */
+/* Apply with: <!-- _class: ugm-invert --> */
+section.ugm-invert {
+  background-color: var(--ox-blue);
+  color: var(--white);
+}
+
+/* Inverted headings */
+section.ugm-invert h1,
+section.ugm-invert h2,
+section.ugm-invert h3,
+section.ugm-invert h4,
+section.ugm-invert h5,
+section.ugm-invert h6 {
+  color: var(--white);
+  border-color: var(--electric-blue);
+}
+
+/* Subtle tweak so main title pops */
+section.ugm-invert h1 {
+  border-bottom: 3px solid var(--electric-blue);
+}
+
+/* Body text */
+section.ugm-invert p,
+section.ugm-invert li,
+section.ugm-invert blockquote {
+  color: var(--white);
+}
+
+/* Emphasised/strong text on dark background */
+section.ugm-invert strong {
+  color: var(--electric-blue);
+}
+
+/* Links on dark background */
+section.ugm-invert a {
+  color: var(--naples);
+  border-bottom-color: var(--naples);
+}
+
+section.ugm-invert a:hover {
+  background-color: var(--naples);
+  color: var(--ox-blue);
+  border-bottom-color: transparent;
+}
+
+/* Code on dark background */
+section.ugm-invert code {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--naples);
+}
+
+section.ugm-invert pre {
+  background-color: #cee9ff; /* near-black */
+  color: #e5f4ff;
+  border-left-color: var(--electric-blue);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+section.ugm-invert pre:hover {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.5),
+    /* Purple-blue glow */ 0 10px 40px rgba(59, 130, 246, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transform: scale(1.02);
+}
+
+section.ugm-invert pre code {
+  background-color: transparent;
+  color: #003662;
+  padding: 0;
+  font-weight: 900;
+}
+
+section.ugm-invert pre code::selection {
+  color: rgb(38, 38, 38);
+  background: yellow;
+}
+
+/* Cards on dark background */
+section.ugm-invert .card {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-left-color: var(--electric-blue);
+}
+
+/* Tables on dark background */
+section.ugm-invert table thead {
+  background-color: #475c8d;
+  color: var(--ox-blue);
+}
+
+section.ugm-invert table thead tr th {
+  background-color: var(--azul);
+  color: var(--white);
+}
+
+section.ugm-invert table td,
+section.ugm-invert table th {
+  color: var(--electric-blue);
+  border-bottom-color: rgba(255, 255, 255, 0.781);
+}
+
+section.ugm-invert table tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+section.ugm-invert table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* =========================================
+   Variant 3: Gradient Style Layout
+   ========================================= */
+/* Apply with: <!-- _class: ugm-gradient --> */
+section.ugm-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--electric-blue) 0%,
+    var(--azul) 75%,
+    var(--ox-blue) 100%
+  );
+  color: var(--white);
+}
+section.ugm-gradient header,
+section.ugm-gradient footer {
+  color: var(--white);
+  background-color: #106fbd87;
+}
+
+/* Headings on gradient */
+section.ugm-gradient h1,
+section.ugm-gradient h2,
+section.ugm-gradient h3,
+section.ugm-gradient h4,
+section.ugm-gradient h5,
+section.ugm-gradient h6 {
+  color: var(--white);
+  border-color: var(--naples);
+}
+
+/* Strong title emphasis */
+section.ugm-gradient h1 {
+  border-bottom: 3px solid var(--naples);
+}
+
+/* Subtitle with warm accent */
+section.ugm-gradient h2 {
+  border-left: 4px solid var(--naples);
+}
+
+/* Body text */
+section.ugm-gradient p,
+section.ugm-gradient li,
+section.ugm-gradient blockquote {
+  color: var(--white);
+}
+
+/* Links on gradient */
+section.ugm-gradient a {
+  color: var(--naples);
+  border-bottom-color: var(--naples);
+}
+
+section.ugm-gradient a:hover {
+  background-color: var(--naples);
+  color: var(--ox-blue);
+  border-bottom-color: transparent;
+}
+
+/* Cards on gradient */
+section.ugm-gradient .card {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-left-color: var(--naples);
+}
+/* Tables on gradient */
+section.ugm-gradient table thead {
+  background-color: var(--ox-blue);
+  color: var(--white);
+}
+
+section.ugm-gradient table thead tr th {
+  color: var(--electric-blue);
+  background-color: rgb(0, 0, 0, 0.8);
+  border-bottom-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Make body text light and high-contrast */
+section.ugm-gradient table td,
+section.ugm-gradient table th {
+  color: #f5f5f5;
+  border-bottom-color: rgba(0, 0, 0, 0.85);
+}
+
+/* Stronger zebra striping on dark-ish rows */
+section.ugm-gradient table tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* Optional: slightly lighter even rows for more separation */
+section.ugm-gradient table tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.18);
+}
+
+section.ugm-invert table th,
+section.ugm-invert table td,
+section.ugm-gradient table th,
+section.ugm-gradient table td {
+  /* color: var(--azul); */
+  color: inherit;
+}
+
+/* =========================================
+   Variant 4: Funky Accent Layout
+   Apply with: <!-- _class: ugm-funky -->
+   ========================================== */
+
+section.ugm-funky {
+  background-color: var(--naples);
+  color: var(--ox-blue);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative blobs */
+section.ugm-funky::before,
+section.ugm-funky::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+section.ugm-funky::before {
+  width: 260px;
+  height: 260px;
+  top: -80px;
+  right: -40px;
+}
+
+section.ugm-funky::after {
+  width: 200px;
+  height: 200px;
+  bottom: -60px;
+  left: -30px;
+}
+
+/* Headings on funky background */
+section.ugm-funky h1,
+section.ugm-funky h2,
+section.ugm-funky h3,
+section.ugm-funky h4,
+section.ugm-funky h5,
+section.ugm-funky h6 {
+  color: var(--ox-blue);
+  border-color: var(--ox-blue);
+}
+
+section.ugm-funky h1 {
+  border-bottom: 4px solid var(--ox-blue);
+}
+
+section.ugm-funky h2 {
+  border-left: 4px solid var(--ox-blue);
+}
+
+/* Body text */
+section.ugm-funky p,
+section.ugm-funky li,
+section.ugm-funky blockquote {
+  color: var(--ox-blue);
+}
+
+/* Emphasis and strong text */
+section.ugm-funky strong {
+  color: var(--ox-blue);
+}
+
+section.ugm-funky em {
+  color: var(--azul);
+}
+
+/* Links */
+section.ugm-funky a {
+  color: var(--ox-blue);
+  border-bottom-color: var(--ox-blue);
+}
+
+section.ugm-funky a:hover {
+  background-color: var(--ox-blue);
+  color: var(--naples);
+  border-bottom-color: transparent;
+}
+
+/* Code on funky background */
+section.ugm-funky code {
+  background-color: rgba(0, 0, 0, 0.07);
+  color: var(--ox-blue);
+}
+
+section.ugm-funky pre {
+  background-color: var(--white);
+  color: var(--white);
+  border-left-color: var(--ox-blue);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+section.ugm-funky pre:hover {
+  box-shadow: 0 0 15px rgba(217, 119, 6, 0.35), 0 12px 28px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(217, 119, 6, 0.3);
+  border-radius: 10px;
+  transform: scale(1.02);
+}
+
+section.ugm-funky pre code {
+  background-color: transparent;
+  color: var(--ox-blue);
+  padding: 0;
+  font-weight: 900;
+}
+
+section.ugm-funky pre code::selection {
+  color: var(--white);
+  background: rgb(255, 76, 57);
+}
+
+/* Cards on funky background */
+section.ugm-funky .card {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-left-color: var(--ox-blue);
+}
+
+/* Tables on funky background */
+section.ugm-funky table thead {
+  background-color: var(--ox-blue);
+  color: var(--white);
+}
+
+section.ugm-funky table thead tr th {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: var(--naples);
+  border-bottom-color: var(--naples);
+}
+
+section.ugm-funky table td,
+section.ugm-funky table th {
+  color: var(--ox-blue);
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+
+section.ugm-funky table tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+section.ugm-funky table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.45);
+}
