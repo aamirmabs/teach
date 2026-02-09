@@ -28,7 +28,7 @@ D) Everywhere (cars, games, smart devices, etc.)
 
 ---
 
-<div class="cols cols-2-eq">
+<div class="cols cols-12">
 
 <!-- column 1 -->
 <div>
@@ -48,7 +48,7 @@ D) Everywhere (cars, games, smart devices, etc.)
 
 ---
 
-<div class="cols cols-2-eq">
+<div class="cols cols-12">
 
 <!-- column 1 -->
 <div>
@@ -73,6 +73,12 @@ D) Everywhere (cars, games, smart devices, etc.)
 </div>
 
 </div>
+
+---
+
+## Let's Talk Money 💰
+
+![center h:100%](../shared/gifs/Bugs-Bunny-Money.gif)
 
 ---
 
@@ -127,7 +133,7 @@ D) Everywhere (cars, games, smart devices, etc.)
 
 ## Who Uses Python?
 
-![center medium](../shared/gifs/python-snake-animation.gif)
+![center h:300](../shared/gifs/python-snake-animation.gif)
 
 ---
 
@@ -154,7 +160,6 @@ D) Everywhere (cars, games, smart devices, etc.)
 | **Software Engineering**    | Building systems, testing, version control          |
 | **Cybersecurity**           | Security scripts, log analysis, penetration testing |
 | **Artificial Intelligence** | ML models, data analysis, neural networks           |
-| **Networking**              | Network automation, traffic analysis, monitoring    |
 
 **One language. Five careers. Infinite possibilities.**
 
@@ -207,9 +212,9 @@ _Vote for features you want (select all that apply):_
 
 <div class="inline-images">
 
-![left h:450](../shared/gifs/Architecture-Build.gif)
+![left](../shared/gifs/Architecture-Build.gif)
 
-![right h:450](../shared/gifs/animation-art-city.gif)
+![right](../shared/gifs/animation-art-city.gif)
 
 </div>
 
@@ -262,6 +267,177 @@ _Vote for features you want (select all that apply):_
 </div>
 
 </div>
+
+---
+
+![bg right](../shared/images/alien-tea.png)
+
+## Warm-up Activity
+
+**Task (Individual – 5 min):**
+
+Open notepad on your pc and write down the steps to:
+
+**Instruct an Alien to Make a cup of tea**
+
+---
+
+## Discuss: Share Your Steps
+
+We’ll look at a few volunteer examples.
+
+---
+
+<!-- _class: ugm-funky -->
+
+## What are Your Thoughts?
+
+Questions to think about:
+
+- How are these **descriptions different**?
+- Which would be easiest for a **robot** to follow?
+- Are any steps **missing or ambiguous**?
+  - e.g. “Boil water” – how? when? with what?
+
+Key idea:
+You just wrote **informal algorithms**.
+
+---
+
+## Why Pseudocode?
+
+Pseudocode is a bridge between:
+
+- **Plain English** (easy to understand, but vague)
+- **Real code** (precise, but strict and fussy)
+
+We use pseudocode to:
+
+- Focus on **logic before syntax**
+- Communicate ideas with others (including non‑coders)
+- Plan solutions that can later be turned into **Python**
+- Reduce getting stuck on small language details
+
+---
+
+## What Is Pseudocode?
+
+**Pseudocode** is:
+
+> A structured, language‑independent way of writing algorithms using plain English and programming‑like keywords.
+
+Properties:
+
+- Not a real programming language
+- No official “right” version, but we agree a **house style**
+- Easy to translate into **any** programming language
+
+---
+
+<!-- _class: ugm-invert -->
+
+## Example: Tea in Pseudocode
+
+<div class="cols cols-21">
+
+<div>
+
+Let’s rewrite “make tea” in a more structured way:
+
+```plaintext
+BEGIN
+  FILL kettle with water
+  SWITCH kettle ON
+  WAIT until water is boiling
+  PLACE teabag in cup
+  POUR boiling water into cup
+  WAIT 3 minutes
+  REMOVE teabag
+  ADD milk if desired
+  ADD sugar if desired
+  STIR drink
+END
+```
+
+</div>
+
+<div>
+
+Notice:
+
+- Clear **BEGIN** and **END**
+- One action per line
+- Simple conditional idea: “if desired”
+
+</div>
+
+</div>
+
+---
+
+## Computer-style Pseudocode Example
+
+Now a more “program-like” example: **Pass / Fail**
+
+```plaintext
+BEGIN
+  INPUT score
+  IF score >= 40 THEN
+    OUTPUT "Pass"
+  ELSE
+    OUTPUT "Fail"
+  ENDIF
+END
+```
+
+This matches the **Pass/Fail flowchart** you’ve seen before.
+
+---
+
+<!-- _class: ugm-funky -->
+
+## Mapping to Code (Preview)
+
+<div class="cols cols-2-eq">
+
+<!-- column 1 -->
+<div>
+
+Pseudocode:
+
+```
+INPUT score
+IF score >= 40 THEN
+  OUTPUT "Pass"
+ELSE
+  OUTPUT "Fail"
+ENDIF
+```
+
+</div>
+
+<!-- column 2 -->
+<div>
+
+Rough Python:
+
+```python
+score = int(input("Enter score: "))
+if score >= 40:
+  print("Pass")
+else:
+  print("Fail")
+```
+
+</div>
+
+</div>
+
+---
+
+## Let's get back to writing some code
+
+![center h:400](../shared/gifs/TomCruiseTropicThunderDance.gif)
 
 ---
 
@@ -641,21 +817,6 @@ E) Something else (type in comments!)
 
 ---
 
-## Real Graduate Outcomes 🎓
-
-**Our recent graduates now work at:**
-
-- Google (London) – Junior SE, £45k starting
-- BBC (MediaCity) – Software Developer, £32k
-- AO.com (Bolton) – Full Stack Developer, £38k
-- Auto Trader (Manchester) – Python Developer, £40k
-- Freelance/Startup – Building their own products
-
-**Within 3-5 years:** £50k-£70k is typical
-**Within 10 years:** £100k+ for senior/lead roles
-
----
-
 <!-- _class: lead -->
 
 # Questions? 🙋
@@ -680,9 +841,9 @@ E) Something else (type in comments!)
 
 **Contact:**
 
-- Email: [computing@youruni.ac.uk]
-- Website: [youruni.ac.uk/computing]
-- Instagram/TikTok: @yourunicomputing
+- Email: a.abbas@greatermanchester.ac.uk
+- Website: greatermanchester.ac.uk
+- Instagram/TikTok: @unigm_cs
 
 ---
 
